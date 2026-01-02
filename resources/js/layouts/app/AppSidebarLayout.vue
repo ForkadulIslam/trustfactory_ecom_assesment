@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue';
+import { usePage } from '@inertiajs/vue3';
 import AppContent from '@/components/AppContent.vue';
 import AppShell from '@/components/AppShell.vue';
 import AppSidebar from '@/components/AppSidebar.vue';
@@ -12,6 +14,7 @@ interface Props {
 withDefaults(defineProps<Props>(), {
     breadcrumbs: () => [],
 });
+
 </script>
 
 <template>
