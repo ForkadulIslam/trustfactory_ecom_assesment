@@ -29,7 +29,6 @@ class LowStockNotificationJob implements ShouldQueue
     public function handle(): void
     {
         // For now, let's just log the email content instead of sending it.
-        // In a real application, you would send the email here.
         $mailable = new LowStockAlert($this->product);
         $renderedMail = $mailable->render(); // Render the email content
 
